@@ -25,7 +25,7 @@ class _PlayMusicState extends State<PlayMusic> {
     super.initState();
     player = AudioPlayer();
     cache = AudioCache(fixedPlayer: player);
-    cache.load("a.mp3");
+    cache.load("ayub.m4a");
     index=0;
     setUp();
   }
@@ -114,7 +114,6 @@ class _PlayMusicState extends State<PlayMusic> {
                 } else {
                   setState(() {
                     isPlay = true;
-                    //cache.play("a.mp3");
                     playMusic();
                   });
                   //playMusic();
@@ -141,22 +140,6 @@ class _PlayMusicState extends State<PlayMusic> {
                   });
                   player.stop();
                 }
-
-                // setState(() {
-                //   seekTo(musicLength.inSeconds+sec);
-                //   if (currentPostion < musicLength - Duration(seconds: 10)) {
-                //     seekTo(currentPostion.inSeconds+10);
-                //     print (currentPostion);
-                //     print (musicLength);
-                //   }
-                //   else{
-                //     seekTo(musicLength.inSeconds);
-                //   isPlay=false;
-                //   player.stop();
-                //     print ("$currentPostion   +else");
-                //     print ("$musicLength    +else");
-                //   }
-                // });
               },
               icon: const Icon(FontAwesomeIcons.forward),
               iconSize: 20,
@@ -176,7 +159,7 @@ class _PlayMusicState extends State<PlayMusic> {
   }
 
   void playMusic() {
-    cache.play("a.mp3");
+    cache.play("ayub.m4a");
   }
 
   void seekTo(int i) {
